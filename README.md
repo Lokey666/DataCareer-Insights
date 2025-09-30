@@ -129,7 +129,7 @@ for i , (column ,title ) in enumerate(dict_colum.items()):
     ax[i].pie(df[column].value_counts(), labels=['False', 'True'], autopct='%1.1f%%', startangle=90)
     ax[i].set_title(title)
 ```
-You can see the visualizations here:[EDA_visuals](D:\py_project_jobs\visualizations\EDA_visuals\boolean_pie.png)
+
 ---
 
 ### 5. Top Companies Hiring Data Analysts in India
