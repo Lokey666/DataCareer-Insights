@@ -151,7 +151,7 @@ plt.xlabel('Count of Jobs')
 plt.ylabel('Companies')
 plt.show()
 ```
-[alt text](visualizations/EDA_visuals/Top_companies_data_analyst.png)
+![alt text](visualizations/EDA_visuals/Top_companies_data_analyst.png)
 ---
 
 ### 6. Highest Paying Data Jobs in India
@@ -176,7 +176,7 @@ plt.title('Highest paying  data jobs in India')
 ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos: f'${x/1000:,.0f}K'))
 plt.show()
 ```
-[alt text](visualizations/EDA_visuals/Highest_paying_datajobs.png)
+![alt text](visualizations/EDA_visuals/Highest_paying_datajobs.png)
 ---
 
 ### 7. Top Paying Data Jobs (Global)
@@ -197,7 +197,7 @@ ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos : f'${x/1000:,.
 
 plt.show
 ```
-[alt text](visualizations/EDA_visuals/top_paying_data_jobs.png)
+![alt text](visualizations/EDA_visuals/top_paying_data_jobs.png)
 ---
 
 This notebook provides a comprehensive overview of the dataset, highlights key trends, and sets the stage for deeper analysis in subsequent notebooks.
