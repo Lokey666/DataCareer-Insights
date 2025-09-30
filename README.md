@@ -110,7 +110,9 @@ plt.xlabel('Count of Jobs')
 plt.ylabel('Location')
 plt.show()
 ```
-You can see the visualizations here:[EDA_visuals](D:\py_project_jobs\visualizations\EDA_visuals\top_locations.png)
+![image-1](visualizations/EDA_visuals/top_locations.png)
+
+
 ---
 
 ### 4. Exploring Boolean Columns
