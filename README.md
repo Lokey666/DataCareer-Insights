@@ -131,7 +131,7 @@ for i , (column ,title ) in enumerate(dict_colum.items()):
     ax[i].pie(df[column].value_counts(), labels=['False', 'True'], autopct='%1.1f%%', startangle=90)
     ax[i].set_title(title)
 ```
-
+![alt text](visualizations/EDA_visuals/boolean_pie.png)
 ---
 
 ### 5. Top Companies Hiring Data Analysts in India
@@ -151,7 +151,7 @@ plt.xlabel('Count of Jobs')
 plt.ylabel('Companies')
 plt.show()
 ```
-
+[alt text](visualizations/EDA_visuals/Top_companies_data_analyst.png)
 ---
 
 ### 6. Highest Paying Data Jobs in India
@@ -176,7 +176,7 @@ plt.title('Highest paying  data jobs in India')
 ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos: f'${x/1000:,.0f}K'))
 plt.show()
 ```
-
+[alt text](visualizations/EDA_visuals/Highest_paying_datajobs.png)
 ---
 
 ### 7. Top Paying Data Jobs (Global)
@@ -197,7 +197,7 @@ ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos : f'${x/1000:,.
 
 plt.show
 ```
-
+[alt text](visualizations/EDA_visuals/top_paying_data_jobs.png)
 ---
 
 This notebook provides a comprehensive overview of the dataset, highlights key trends, and sets the stage for deeper analysis in subsequent notebooks.
@@ -283,7 +283,7 @@ fig.tight_layout(h_pad=0.5)
 sns.despine()
 plt.show()
 ```
-
+![alt text](visualizations/Analysis_visuals/count_of_skills.png)
 ---
 
 This notebook provides insight into which skills are most frequently required for the top data job titles in India, helping job seekers and employers understand the current demand in the market.
@@ -364,7 +364,7 @@ for x in range(5):
     plt.text(11.2, df_percent.iloc[-1,x], df_percent.columns[x])
 plt.show()
 ```
-
+![alt text](visualizations/Analysis_visuals/skill_demand.png)
 ---
 
 This notebook provides insight into how the demand for top skills in Data Analyst roles in India changes throughout the year, helping job seekers and employers track trends in the data job market.
@@ -433,7 +433,7 @@ plt.xlim(0, 300000)
 sns.despine()
 plt.show()
 ```
-
+![alt text](visualizations/Analysis_visuals/Salary_Trends.png)
 ---
 
 This notebook provides a clear comparison of salary distributions for the most common data job titles in India, helping users understand which roles offer higher pay and how salaries vary within each role.
@@ -523,7 +523,7 @@ fig.tight_layout()
 sns.despine()
 plt.show()
 ```
-
+![alt text](visualizations/Analysis_visuals/skills_vs_salary.png)
 ---
 
 This notebook helps identify which skills are associated with higher salaries and which are most frequently required for Data Analyst positions in India, providing valuable insights for both job seekers and employers.
@@ -604,7 +604,7 @@ plt.tight_layout()
 sns.despine()
 plt.show()
 ```
-
+![alt text](visualizations/Analysis_visuals/Optimal_skills.png)
 ---
 
 This notebook helps identify which skills are both highly demanded and associated with higher salaries for Data Analyst positions in India, providing actionable insights for job seekers aiming to maximize their earning potential.
