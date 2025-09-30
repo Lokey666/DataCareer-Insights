@@ -1,4 +1,4 @@
-# py_project_jobs
+# **DataCareer Insights**
 
 A data analysis project exploring trends in data-related job postings, salaries, and required skills using Python, pandas, and visualization libraries.
 
