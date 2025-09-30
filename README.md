@@ -5,16 +5,23 @@ A data analysis project exploring trends in data-related job postings, salaries,
 ## Project Structure
 
 ```
+## Project Structure
+
 my_project/
-    01_EDA.ipynb                # Exploratory Data Analysis
-    02_count_of_skills.ipynb    # Analysis of skill counts in job postings
-    03_skill_demand.ipynb       # Skill demand analysis
-    04_salary_trends.ipynb      # Salary trends over time
-    05_skills_vs_salary.ipynb   # Relationship between skills and salary
-    06_optimal_skill.ipynb      # Identifying optimal skills for higher salaries
-visualizations/                 # Additional plots and figures
-3_pandas_pivot_tables.ipynb     # Pivot table analysis of salaries by country and job title
-README.md
+│
+├── 01_EDA.ipynb                # Exploratory Data Analysis
+├── 02_count_of_skills.ipynb    # Analysis of skill counts in job postings
+├── 03_skill_demand.ipynb       # Skill demand analysis
+├── 04_salary_trends.ipynb      # Salary trends over time
+├── 05_skills_vs_salary.ipynb   # Relationship between skills and salary
+├── 06_optimal_skill.ipynb      # Identifying optimal skills for higher salaries
+│
+├── visualizations/             # Additional plots and figures
+│   ├── Analysis_visuals/        # Visualizations related to analysis
+│   └── EDA_visuals/             # Visualizations related to EDA
+│
+└── README.md                   # Project documentation
+
 ```
 
 ## Dataset
@@ -38,29 +45,17 @@ README.md
     ```
 3. Open the notebooks in Jupyter or VS Code and run the cells.
 
+## Tools Used
 
-Here’s how to create a pivot table of median salaries by country and job title:
+- **Python 3.10+** — Programming language  
+- **pandas** — Data manipulation and analysis  
+- **NumPy** — Numerical computations  
+- **Matplotlib** — Data visualization  
+- **Seaborn** — Advanced statistical plots  
+- **Hugging Face Datasets** — For loading the `lukebarousse/data_jobs` dataset  
+- **adjustText** — For improving text label placement in plots  
+- **Jupyter Notebook / VS Code** — Interactive development environment  
 
-```python
-import pandas as pd
-from datasets import load_dataset
-
-dataset = load_dataset('lukebarousse/data_jobs')
-df = dataset['train'].to_pandas()
-df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
-
-job_countries = df['job_country'].value_counts().head(5).index
-job_country_salary = df.pivot_table(
-    values='salary_year_avg',
-    index='job_country',
-    columns='job_title_short',
-    aggfunc='median'
-)
-job_country_salary = job_country_salary.loc[job_countries]
-job_titles = ['Data Analyst', 'Data Engineer', 'Data Scientist']
-job_country_salary = job_country_salary[job_titles]
-print(job_country_salary)
-```
 # **Explotary Data Analysis**
 ## 01_EDA.ipynb — Exploratory Data Analysis
 
@@ -115,7 +110,7 @@ plt.xlabel('Count of Jobs')
 plt.ylabel('Location')
 plt.show()
 ```
-
+You can see the visualizations here:[EDA_visuals](D:\py_project_jobs\visualizations\EDA_visuals\top_locations.png)
 ---
 
 ### 4. Exploring Boolean Columns
@@ -134,7 +129,7 @@ for i , (column ,title ) in enumerate(dict_colum.items()):
     ax[i].pie(df[column].value_counts(), labels=['False', 'True'], autopct='%1.1f%%', startangle=90)
     ax[i].set_title(title)
 ```
-
+You can see the visualizations here:[EDA_visuals](D:\py_project_jobs\visualizations\EDA_visuals\boolean_pie.png)
 ---
 
 ### 5. Top Companies Hiring Data Analysts in India
